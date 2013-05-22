@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" id="PikSlides">
+<head>
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="content-type" content="text/html,charset=utf-8" />
+
+  <title>:: FirefoxOS ::</title>
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <link rel="stylesheet" type="text/css" href="../core/base.css" >
+  <link rel="stylesheet" type="text/css" href="vendor/prism/prism.css">
+  <link rel="stylesheet" type="text/css" href="vendor/google-webfont/font.css">
+  <link rel="stylesheet" type="text/css" href="vendor/icomoon/arrows/style.css">
+
+</head>
+<body>
+
+
+<!---->
+
+
+  <div class="pikSlide part" id="Start">
+
+    <div class="flex-container">
+
+      <div class="title">FirefoxOS</div>
+
+      <div class="subtitle">Mobile Web 2.0</div>
+
+      <figure>
+
+        <img class="no-border" src="assets/firefox-phone.png" height="100%" alt="Firefox OS"/>
+
+      </figure>
+
+    </div>
+
+  </div>
+
+
+  <div class="pikSlide">
+
+    <p class="category"> <span class="slide-no">1</span> Overview</p>
+
+    <div class="flex-container">
+
+      <ul>
+        <li>Info</li>
+        <li>Features</li>
+        <li>Trend</li>
+      </ul>
+
+    </div>
+
+
+    <div class="pikNotes">
+
+      <p>Past - Current - Future</p>
+
+    </div>
+
+  </div>
+
+
+
+<!-- I.Part: Info -->
+<div class="pikSlide part">
+
+  <div class="flex-container">
+
+    <div class="title">Background</div>
+
+  </div>
+
+</div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"> <span class="slide-no">3</span> Mobile Market</p>
+
+    <div class="flex-container">
+
+      <figure>
+
+        <img src="assets/mobile-web.png" height="100%" alt="Mobile Web"/>
+
+      </figure>
+
+    </div>
+
+
+    <div class="pikNotes">
+
+      <p>
+
+        <!-- Comparision with Android, iOS + FFOS (table with 3 rows/colums) -->
+
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- Background -->
+  <div class="pikSlide">
+
+    <p class="category"> <span class="slide-no">2</span> History</p>
+
+    <div class="flex-container">
+
+      <p>2011: Boot2Gecko</p>
+
+      <!-- arrow: down -->
+      <span aria-hidden="true" data-icon="&#xf063;"></span>
+
+      <p>2013: FirefoxOS</p>
+
+    </div>
+
+
+    <div class="pikNotes">
+
+      <p>2012: Mobile World Congress</p>
+
+    </div>
+
+  </div>
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"> <span class="slide-no">2</span> Architecture</p>
+
+    <div class="flex-container">
+
+      <figure>
+
+        <img src="assets/architecture.png" height="100%" alt="B2G Architecture"/>
+
+      </figure>
+
+    </div>
+
+
+
+    <div class="pikNotes">
+
+      <p>
+        <ol>
+          <li>1. Gonk</li>
+          <li>2. Gecko</li>
+          <li>3. Gaia</li>
+        </ol>
+
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+<!-- II.Part: Code -->
+<div class="pikSlide part">
+
+  <div class="flex-container">
+
+    <div class="title">Code</div>
+
+  </div>
+
+</div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"> <span class="slide-no">5</span> WebAPI</p>
+
+    <div class="flex-container">
+
+      <ul>
+
+        <li>
+          <span>GPS -</span>
+          <a href="https://developer.mozilla.org/en-US/docs/WebAPI/Using_geolocation#content-main">Geolocation</a>
+        </li>
+
+        <li>
+          <span>Camera -</span>
+          <a href="https://developer.mozilla.org/en-US/docs/WebRTC/navigator.getUserMedia#content-main">getUserMedia</a>
+        </li>
+
+        <li>
+          <span>Gyroscope -</span>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/deviceorientation#content-main">Device Orientation</a>
+        </li>
+
+      </ul>
+
+    </div>
+
+
+    <div class="pikNotes">
+
+      <p></p>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"> <span class="slide-no">6</span> WebAPI</p>
+
+    <div class="flex-container">
+
+      <h3>Overview: <a href="https://developer.mozilla.org/en-US/docs/WebAPI#content-main">WebAPI</a></h3>
+
+      <figure>
+
+        <img class="no-border" src="assets/system-support.png" height="100%" alt="System Support"/>
+
+      </figure>
+
+    </div>
+
+
+    <div class="pikNotes">
+
+      <p></p>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"> <span class="slide-no">8</span> WebAPI</p>
+
+    <div class="flex-container">
+
+      <h3><a href="https://developer.mozilla.org/en-US/docs/WebAPI/Battery_Status#content-main">Battery Status</a></h3>
+
+
+      <pre><code class="language-javascript">
+
+        var battery = navigator.battery || navigator.mozBattery;
+
+        battery.addEventListener( 'chargingchange', updateBatteryStatus );
+        battery.addEventListener( 'levelchange',    updateBatteryStatus );
+
+        function updateBatteryStatus(){
+
+          console.log( 'Percentage: ' + battery.level * 100 + ' %' );
+          console.log( 'Discharging: ' + battery.dischargingTime );
+
+          if ( battery.charging ) console.log( 'Battery is charging!' );
+        };
+
+      </code></pre>
+
+    </div>
+
+
+
+    <div class="pikNotes">
+
+      <p></p>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"> <span class="slide-no">7</span> WebAPI</p>
+
+    <div class="flex-container">
+
+      <h3><a href="https://developer.mozilla.org/en-US/docs/WebAPI/Vibration#content-main">Vibration</a></h3>
+
+      <pre><code class="language-javascript">
+
+        // vibrate once for 1 second
+        navigator.vibrate(1000);
+
+        // vibrate multiple times for 1-3 seconds
+        navigator.vibrate([ 1000, 2000, 3000 ]);
+
+        // stop vibration
+        navigator.vibrate(0);
+
+      </code></pre>
+
+    </div>
+
+
+    <div class="pikNotes">
+
+      <p>shake the device</p>
+
+    </div>
+
+  </div>
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"> <span class="slide-no">7</span> WebAPI</p>
+
+    <div class="flex-container">
+
+      <h3><a href="https://developer.mozilla.org/en-US/docs/WebAPI/Using_Light_Events#content-main">Ambient Light Events</a></h3>
+
+      <pre><code class="language-javascript">
+
+        window.addEventListener( 'devicelight', function ( e ) {
+
+            // read the lux value
+            var lux = e.value;
+
+            console.log( lux < 50 ? 'dark' : 'bright' );
+        });
+
+      </code></pre>
+
+    </div>
+
+
+    <div class="pikNotes">
+
+      <p></p>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"> <span class="slide-no">11</span> WebAPI</p>
+
+    <div class="flex-container">
+
+      <h3><a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Publishing/In-app_payments#content-main">WebPayment</a></h3>
+
+      <pre><code class="language-javascript">
+
+        var request = navigator.mozPay([signedJWT1, signedJWTn]);
+
+        request.onsuccess = function () {
+
+          // The payment buy flow completed without errors.
+          // This does NOT mean the payment was successful.
+          waitForServerPostback();
+        }
+
+        request.onerror = function (errorMsg) {
+          console.log( 'Error: ' + this.error.name + ': ' + errorMsg );
+        }
+
+      </code></pre>
+
+    </div>
+
+
+
+    <div class="pikNotes">
+
+      <p></p>
+
+    </div>
+
+  </div>
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"> <span class="slide-no">9</span> WebAPI</p>
+
+    <div class="flex-container">
+
+      <h3><a href="https://developer.mozilla.org/en-US/docs/WebAPI/WebTelephony?redirect=no#content-main">WebTelephony</a></h3>
+
+      <h3><a href="https://developer.mozilla.org/en-US/docs/WebAPI/WebSMS#content-main">WebSMS</a></h3>
+
+      <h3><a href="https://wiki.mozilla.org/WebAPI/WebBluetooth">Web Bluetooth</a></h3>
+
+    </div>
+
+
+
+    <div class="pikNotes">
+
+      <p>
+        <!-- implemented - but not usable via API -->
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+
+<!-- III.Part: Example -->
+<div class="pikSlide part">
+
+  <div class="flex-container">
+
+    <div class="title">Example</div>
+
+  </div>
+
+</div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"> <span class="slide-no">14</span> Web Apps</p>
+
+    <div class="flex-container">
+
+      <ul>
+        <li>Packaged Apps</li>
+        <li>Hosted Apps</li>
+      </ul>
+
+    </div>
+
+
+    <div class="pikNotes">
+
+      <p></p>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"> <span class="slide-no">14</span> Deploy</p>
+
+    <div class="flex-container">
+
+      <h3><a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Manifest#main-content">App Manifest</a></h3>
+
+      <h3><a href="https://developer.mozilla.org/en-US/docs/HTML/Using_the_application_cache#main-content">Offline Cache</a></h3>
+
+    </div>
+
+    <div class="pikNotes">
+
+      <p>3 types ....</p>
+
+    </div>
+
+  </div>
+
+
+<!--
+  <div class="pikSlide">
+
+    <p class="category"> <span class="slide-no">15</span> Demo</p>
+
+    <div class="flex-container">
+
+      <h3>Cloak-Vibration</h3>
+
+    </div>
+
+
+    <div class="pikNotes">
+
+      <p></p>
+
+    </div>
+
+  </div>
+ -->
+
+
+<!-- IV.Part: Code -->
+<div class="pikSlide part">
+
+  <div class="flex-container">
+<!-- latest -->
+    <div class="title">Status</div>
+
+  </div>
+
+</div>
+
+
+  <div class="pikSlide">
+
+    <p class="category"> <span class="slide-no">12</span> Planned</p>
+
+    <div class="flex-container">
+
+      <ul>
+        <li>Connectivity</li>
+        <li>WebUSB</li>
+        <li>WebNFC</li>
+      </ul>
+
+    </div>
+
+
+
+    <div class="pikNotes">
+
+      <p></p>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"> <span class="slide-no">16</span> Distribution</p>
+
+    <div class="flex-container">
+
+      <p>Summer 2013 </p>
+
+      <p>multiple vendors + carrier</p>
+
+    </div>
+
+
+
+    <div class="pikNotes">
+
+      <p>
+
+<!--         Aiming to release in countries with lower income / developing countires, mainly
+
+        south american, africa and asia
+
+        brazilian this summer + talks with larger developers (see whats app & co)
+ -->
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+<!-- V.Part: Code -->
+<div class="pikSlide part">
+
+  <div class="flex-container">
+
+    <div class="title">References</div>
+
+  </div>
+
+</div>
+
+
+  <div class="pikSlide">
+
+    <p class="category"> <span class="slide-no">17</span> Links</p>
+
+    <div class="flex-container">
+
+      <ul>
+        <li><a class="no-popup" href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox_OS">FirefoxOS (MDN)</a></li>
+        <li><a class="no-popup" href="https://support.mozilla.org/en-US/kb/firefox-os-user-guide">User Guide</a></li>
+        <li><a class="no-popup" href="https://wiki.mozilla.org/WebAPI">WebAPI Specs</a></li>
+        <li><a class="no-popup" href="https://developer.mozilla.org/en-US/docs/Web/Apps?redirectlocale=en-US&redirectslug=Apps">Web Apps (MDN)</a></li>
+        <li><a class="no-popup" href="http://buildingfirefoxos.com/">Style Guide</a></li>
+      </ul>
+
+    </div>
+
+  </div>
+
+
+  <div class="pikSlide part">
+
+    <div class="flex-container">
+
+      <div class="title">Questions</div>
+      <div class="amp">&amp;</div>
+      <div class="title">Discussion</div>
+
+    </div>
+
+  </div>
+
+
+
+<!---->
+
+
+<script src="../core/pik7.js"></script>
+<script src="vendor/prism/prism.js"></script>
+
+<script src="custom.js"></script>
+<script src="credits.js"></script>
+
+</body>
+</html>

@@ -1,51 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js" lang="en">
+<head>
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Talks : Collection of Presentations" />
+  <meta charset="utf-8">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="content-type" content="text/html,charset=utf-8" />
 
-    <title>Talks</title>
-  </head>
+  <title>:: Talks ::</title>
 
-  <body>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/Autarc/Talks">View on GitHub</a>
+  <style>
 
-          <h1 id="project_title">Talks</h1>
-          <h2 id="project_tagline">Collection of Presentations</h2>
+    body {
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/Autarc/Talks/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/Autarc/Talks/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+        margin            : 0 auto;
+        width             : calc( 50% - 200px ); /* width/2 */
+        font-size         : 1.6em;
+        background-color  : #f5f5f5;
+        text-align        : center;
+    }
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>Talks</h1>
+    ul { text-align: left;}
 
-<p>Collection of Presentations</p>
-      </section>
-    </div>
+    li {
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Talks maintained by <a href="https://github.com/Autarc">Autarc</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+        margin            : 20px 0;
+        padding           : 10px;
+        width             : 400px;
 
-    
+        border            : 1px solid #333;
 
-  </body>
+        list-style        : none;
+        background-color  : #f2f2f2;
+    }
+
+
+    a {
+        text-decoration   : none;
+        color             : #3311ff;
+    }
+
+    a:hover{ text-decoration: underline; }
+
+    .date { float: right;}
+
+
+  </style>
+
+</head>
+<body>
+
+  <h2>Talks</h2>
+
+  <script>
+
+    var talks = [
+
+      '2012-XX-XX_Beyond-Tellerrand',
+      '2013-03-07_WebRTC',
+      '2013-04-27_Introduction-to-JS',
+      '2013-05-22_FirefoxOS',
+      '2013-05-30_PeerGaming',
+      '2013-07-09_Testing',
+      '20XX-XX-XX_Tweaks'
+
+    ].map( split );
+
+
+    var fragment = document.createDocumentFragment(),
+
+        list     = document.createElement('ul'),
+
+        entries  = [];
+
+
+    for ( var i = 0, l = talks.length; i < l; i++ ) {
+
+      entries.push('<li>\
+                      <a href="' + talks[i].url + '">' + talks[i].title + '</a>\
+                      <span class="date">| ' + talks[i].date + '</span>\
+                    </li>');
+    }
+
+    list.innerHTML = entries.join('');
+
+    fragment.appendChild( list );
+
+    document.body.appendChild( fragment.cloneNode(true) );
+
+    function split ( entry ) {
+
+      var data = entry.split('_');
+
+      return {
+                date  : data[0],
+                title : data[1].replace( /-/g, ' ' ),
+                url   : entry
+             };
+    }
+
+  </script>
+
+</body>
 </html>

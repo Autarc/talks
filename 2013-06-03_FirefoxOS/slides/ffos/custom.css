@@ -1,21 +1,22 @@
-
 /**
  *  Global
  */
 
-ul { list-style: none; }
+ul, ol  { list-style: none; }
 ul > li { margin: 50px 0; }
 
 a {
 
-  color: #20605A;
-  text-decoration: none;
-  font-weight: bold;/*normal;*/
+  color           : #20605A;
+  text-decoration :    none;
+  font-weight     :    bold;
 }
 
 a:hover{ border-bottom: 2px solid #20605A; }
 
 figure > a { border-bottom: none !important; }
+
+figure > figurecaption { color: #aaa; }
 
 pre { font-size: 1rem; }
 
@@ -34,11 +35,11 @@ img {
   border: 1px solid #000;
 
   cursor: pointer;
+
+  border-radius: 10px;
 }
 
-
 .no-border { border: none; cursor: default; }
-
 
 
 
@@ -50,10 +51,9 @@ body {
 
   background-color: #222;
 
-  /*font-family     : 'Noto Serif', serif;*/
-  /*font-size       : 1rem;*/
+  font-family     : 'Noto Serif', serif;
+  font-size       : 1rem;
 }
-
 
 
 
@@ -103,8 +103,6 @@ body {
 
 
   text-align: center;
-
-  /*font-size: 3rem;*/
 }
 
 
@@ -112,7 +110,7 @@ body {
  *  Category
  */
 
-.slide-no { display: none; }
+.js-slide-no { display: none; }
 
 .category {
 
@@ -123,8 +121,6 @@ body {
   color   : #994947;
 
   border-bottom: 1px solid #ccc;
-
-  /*font-size    : 2rem;*/
 }
 
 
@@ -134,9 +130,10 @@ body {
 
 .part {
 
-    background-color: #AC5839   !important;
-    color           : #ddd      !important;
+  background-color: #AC5839   !important;
+  color           : #ddd      !important;
 }
+
 
 
 
@@ -152,6 +149,11 @@ body {
 }
 
 
+.step { visibility: hidden; }
+
+.step-prev { color: #999; }
+
+
 
 /**
  *  Prism - Adjustment (line 27)
@@ -163,3 +165,10 @@ pre[class*="language-"] {
   overflow: hidden;
   border-radius: 0.5em;
 }
+
+.pos-code { margin-top: 50px; }
+
+
+/**
+ *  Specific
+ */

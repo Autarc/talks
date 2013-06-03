@@ -17,36 +17,37 @@
   <link rel="stylesheet" type="text/css" href="vendor/prism/prism.css">
   <link rel="stylesheet" type="text/css" href="vendor/google-webfont/font.css">
   <link rel="stylesheet" type="text/css" href="vendor/icomoon/arrows/style.css">
+  <link rel="stylesheet" type="text/css" href="vendor/label.css/label.css">
 
 </head>
 <body>
 
 
-<!---->
+<!-- -->
 
 
-  <div class="pikSlide part" id="Start">
+<div class="pikSlide part" id="Start">
 
-    <div class="flex-container">
+  <div class="flex-container">
 
-      <div class="title">FirefoxOS</div>
+    <div class="title">FirefoxOS</div>
 
-      <div class="subtitle">Mobile Web 2.0</div>
+    <div class="subtitle">Mobile Web 2.0</div>
 
-      <figure>
+    <figure>
 
-        <img class="no-border" src="assets/firefox-phone.png" height="100%" alt="Firefox OS"/>
+      <img class="no-border" src="assets/firefox-phone.png" height="100%" alt="Firefox OS"/>
 
-      </figure>
-
-    </div>
+    </figure>
 
   </div>
+
+</div>
 
 
   <div class="pikSlide">
 
-    <p class="category"> <span class="slide-no">1</span> Overview</p>
+    <p class="category"> <span class="js-slide-no"></span> Overview</p>
 
     <div class="flex-container">
 
@@ -84,13 +85,15 @@
 
   <div class="pikSlide">
 
-    <p class="category"> <span class="slide-no">3</span> Mobile Market</p>
+    <p class="category"> <span class="js-slide-no"></span> Mobile Market</p>
 
     <div class="flex-container">
 
       <figure>
 
         <img src="assets/mobile-web.png" height="100%" alt="Mobile Web"/>
+
+        <figurecaption>Facebook</figurecaption>
 
       </figure>
 
@@ -111,14 +114,43 @@
 
 
 
-  <!-- Background -->
+  <!-- -->
+
+
+
   <div class="pikSlide">
 
-    <p class="category"> <span class="slide-no">2</span> History</p>
+    <p class="category"> <span class="js-slide-no"></span> History</p>
 
     <div class="flex-container">
 
       <p>2011: Boot2Gecko</p>
+
+      <!-- arrow: down -->
+      <span class="step" aria-hidden="true" data-icon="&#xf063;"></span>
+
+      <p class="step">2013: FirefoxOS</p>
+
+    </div>
+
+
+    <div class="pikNotes">
+
+      <p>2012: Mobile World Congress</p>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"> <span class="js-slide-no"></span> History</p>
+
+    <div class="flex-container">
+
+      <p class="step-prev">2011: Boot2Gecko</p>
 
       <!-- arrow: down -->
       <span aria-hidden="true" data-icon="&#xf063;"></span>
@@ -136,15 +168,19 @@
 
   </div>
 
+  <!--  -->
 
 
 
   <div class="pikSlide">
 
-    <p class="category"> <span class="slide-no">2</span> Architecture</p>
+    <p class="category"> <span class="js-slide-no"></span> Architecture</p>
 
     <div class="flex-container">
 
+      <!-- problem -> disrupts structure etc. -->
+
+      <!-- <figure class="label inside bottom right" data-label="B2G architecutre"> -->
       <figure>
 
         <img src="assets/architecture.png" height="100%" alt="B2G Architecture"/>
@@ -172,10 +208,6 @@
 
 
 
-
-
-
-
 <!-- II.Part: Code -->
 <div class="pikSlide part">
 
@@ -188,48 +220,9 @@
 </div>
 
 
-
   <div class="pikSlide">
 
-    <p class="category"> <span class="slide-no">5</span> WebAPI</p>
-
-    <div class="flex-container">
-
-      <ul>
-
-        <li>
-          <span>GPS -</span>
-          <a href="https://developer.mozilla.org/en-US/docs/WebAPI/Using_geolocation#content-main">Geolocation</a>
-        </li>
-
-        <li>
-          <span>Camera -</span>
-          <a href="https://developer.mozilla.org/en-US/docs/WebRTC/navigator.getUserMedia#content-main">getUserMedia</a>
-        </li>
-
-        <li>
-          <span>Gyroscope -</span>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/deviceorientation#content-main">Device Orientation</a>
-        </li>
-
-      </ul>
-
-    </div>
-
-
-    <div class="pikNotes">
-
-      <p></p>
-
-    </div>
-
-  </div>
-
-
-
-  <div class="pikSlide">
-
-    <p class="category"> <span class="slide-no">6</span> WebAPI</p>
+    <p class="category"> <span class="js-slide-no"></span> WebAPI</p>
 
     <div class="flex-container">
 
@@ -256,7 +249,144 @@
 
   <div class="pikSlide">
 
-    <p class="category"> <span class="slide-no">8</span> WebAPI</p>
+    <p class="category"> <span class="js-slide-no"></span> Position</p>
+
+    <div class="flex-container">
+
+      <h3><a href="https://developer.mozilla.org/en-US/docs/WebAPI/Using_geolocation#content-main">Geolocation</a></h3>
+
+      <pre><code class="language-javascript">
+      var options = { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 };
+
+      // lookup once
+      navigator.geolocation.getCurrenPosition( receivePosition, err, options );
+
+      // continous lookup - navigator.geolocation.clearWatch( id )
+      var id = navigator.geolocation.watchPosition( receivePosition, err, options);
+
+      function receivePosition ( pos ) {
+
+        var coord = pos.coords;
+
+        console.log('Latitude:  ' + crd.latitude  );
+        console.log('Longitude: ' + crd.longitude );
+        console.log('Accuracy:  ' + crd.accuracy  ); // meters
+      }
+      </code></pre>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"> <span class="js-slide-no"></span> Display</p>
+
+    <div class="flex-container">
+
+      <h3><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API#main-content">Visibility</a></h3>
+
+      <pre><code class="language-javascript">
+
+        /** Handler for visibility change **/
+        document.addEventListener( 'visibilityChange', handleChange );
+
+        function handleChange(){
+
+          var title = document.title.split('[PAUSE]').pop();
+
+          // check if currently hidden
+          document.title = ( document.hidden ? '[PAUSE] - ' : '' ) + title;
+        }
+
+      </code></pre>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+
+  <div class="pikSlide">
+
+    <p class="category"> <span class="js-slide-no"></span> Camera</p>
+
+    <div class="flex-container">
+
+      <h3><a href="https://developer.mozilla.org/en-US/docs/WebRTC/navigator.getUserMedia#content-main">getUserMedia</a></h3>
+
+      <pre><code class="language-javascript">
+        /** request permission **/
+        var config = { audio: true, video: true };
+
+        navigator.getUserMedia( config, function ( e ) {
+
+          var video = document.createElement('video);
+
+          video.autoplay = true;
+
+          video.src = window.URL.createObjectURL( e );
+
+          document.body.appendChild( video );
+
+        }, function ( err ) { console.log( err ); });
+
+      </code></pre>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+
+  <div class="pikSlide">
+
+    <p class="category"> <span class="js-slide-no"></span> Gyroscope</p>
+
+    <div class="flex-container">
+
+      <h3><a href="https://developer.mozilla.org/en-US/docs/Web/Reference/Events/deviceorientation#content-main">Device Orientation</a></h3>
+
+      <pre><code class="language-javascript">
+
+      window.addEventListener( 'deviceorientation', function ( e ) {
+
+        //alpha: rotation around z-axis
+        var rotateDegrees = event.alpha;
+
+        //gamma: left to right
+        var leftToRight = event.gamma;
+
+        //beta: front back motion
+        var frontToBack = event.beta;
+      });
+
+      </code></pre>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+
+  <div class="pikSlide">
+
+    <p class="category"> <span class="js-slide-no"></span> Power</p>
 
     <div class="flex-container">
 
@@ -282,12 +412,8 @@
 
     </div>
 
-
-
     <div class="pikNotes">
-
       <p></p>
-
     </div>
 
   </div>
@@ -298,7 +424,7 @@
 
   <div class="pikSlide">
 
-    <p class="category"> <span class="slide-no">7</span> WebAPI</p>
+    <p class="category"> <span class="js-slide-no"></span> Rumble</p>
 
     <div class="flex-container">
 
@@ -333,7 +459,7 @@
 
   <div class="pikSlide">
 
-    <p class="category"> <span class="slide-no">7</span> WebAPI</p>
+    <p class="category"> <span class="js-slide-no"></span> Light Sensor</p>
 
     <div class="flex-container">
 
@@ -366,7 +492,7 @@
 
   <div class="pikSlide">
 
-    <p class="category"> <span class="slide-no">11</span> WebAPI</p>
+    <p class="category"> <span class="js-slide-no"></span> Market</p>
 
     <div class="flex-container">
 
@@ -406,7 +532,7 @@
 
   <div class="pikSlide">
 
-    <p class="category"> <span class="slide-no">9</span> WebAPI</p>
+    <p class="category"> <span class="js-slide-no"></span> Working</p>
 
     <div class="flex-container">
 
@@ -448,17 +574,16 @@
 
   <div class="pikSlide">
 
-    <p class="category"> <span class="slide-no">14</span> Web Apps</p>
+    <p class="category"> <span class="js-slide-no"></span> Web Apps</p>
 
     <div class="flex-container">
 
       <ul>
         <li>Packaged Apps</li>
-        <li>Hosted Apps</li>
+        <li class="step">Hosted Apps</li>
       </ul>
 
     </div>
-
 
     <div class="pikNotes">
 
@@ -472,11 +597,57 @@
 
   <div class="pikSlide">
 
-    <p class="category"> <span class="slide-no">14</span> Deploy</p>
+    <p class="category"> <span class="js-slide-no"></span> Web Apps</p>
+
+    <div class="flex-container">
+
+      <ul>
+        <li class="step-prev">Packaged Apps</li>
+        <li>Hosted Apps</li>
+      </ul>
+
+    </div>
+
+    <div class="pikNotes">
+
+      <p></p>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"> <span class="js-slide-no"></span> Deploy</p>
 
     <div class="flex-container">
 
       <h3><a href="https://developer.mozilla.org/en-US/docs/Web/Apps/Manifest#main-content">App Manifest</a></h3>
+
+      <h3 class="step"><a href="https://developer.mozilla.org/en-US/docs/HTML/Using_the_application_cache#main-content">Offline Cache</a></h3>
+
+    </div>
+
+    <div class="pikNotes">
+
+      <p>3 types ....</p>
+
+    </div>
+
+  </div>
+
+
+
+
+    <div class="pikSlide">
+
+    <p class="category"> <span class="js-slide-no"></span> Deploy</p>
+
+    <div class="flex-container">
+
+      <h3><a class="step-prev"href="https://developer.mozilla.org/en-US/docs/Web/Apps/Manifest#main-content">App Manifest</a></h3>
 
       <h3><a href="https://developer.mozilla.org/en-US/docs/HTML/Using_the_application_cache#main-content">Offline Cache</a></h3>
 
@@ -491,26 +662,51 @@
   </div>
 
 
-<!--
+
   <div class="pikSlide">
 
-    <p class="category"> <span class="slide-no">15</span> Demo</p>
+    <p class="category"> <span class="js-slide-no"></span> Tools</p>
 
     <div class="flex-container">
 
-      <h3>Cloak-Vibration</h3>
+      <ul>
+        <li><a href="https://getfirebug.com/">Firebug</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Firefox_OS_Simulator">FirefixOS Simulator</a></li>
+      </ul>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"> <span class="js-slide-no"></span> Demo</p>
+
+    <div class="flex-container">
+
+      <h3><a href="../../demo/Vic">Rumble Cloak</a></h3>
+
+      <figure>
+
+        <img src="assets/rumble-cloak.png" height="100%" alt="Vic"/>
+
+      </figure>
 
     </div>
 
 
     <div class="pikNotes">
-
       <p></p>
-
     </div>
 
   </div>
- -->
+
 
 
 <!-- IV.Part: Code -->
@@ -527,7 +723,7 @@
 
   <div class="pikSlide">
 
-    <p class="category"> <span class="slide-no">12</span> Planned</p>
+    <p class="category"> <span class="js-slide-no"></span> Plans</p>
 
     <div class="flex-container">
 
@@ -553,7 +749,7 @@
 
   <div class="pikSlide">
 
-    <p class="category"> <span class="slide-no">16</span> Distribution</p>
+    <p class="category"> <span class="js-slide-no"></span> Distribution</p>
 
     <div class="flex-container">
 
@@ -597,7 +793,7 @@
 
   <div class="pikSlide">
 
-    <p class="category"> <span class="slide-no">17</span> Links</p>
+    <p class="category"> <span class="js-slide-no"></span> Links</p>
 
     <div class="flex-container">
 

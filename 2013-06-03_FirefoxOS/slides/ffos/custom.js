@@ -1,8 +1,22 @@
 (function(){
 
+
+  fillNumbers();
+
   referLinks();
 
   openLinks();
+
+
+  // -- //
+
+  function fillNumbers(){
+
+    var slides = document.querySelectorAll('.js-slide-no');
+
+    for ( var i = 0, l = slides.length; i < l; i++ ) slides[i].textContent = i;
+  }
+
 
   // -- //
 
@@ -12,6 +26,9 @@
 
     for ( var i = 0, l = links.length; i < l; i++ ) links[i].target = '_blank';
   }
+
+
+  // -- //
 
   function openLinks(){
 
@@ -25,8 +42,8 @@
       e.preventDefault();
       e.stopPropagation();
 
-      if ( type === 'a'                                          ) openPopup( el );
-      if ( type === 'img' && !el.classList.contains('no-border') ) openImage( el );
+      if ( type === 'img' && !el.classList.contains('no-border')                  ) openImage( el );
+      if ( type === 'a'   || ( el = el.parentNode ).tagName.toLowerCase() === 'a' ) openPopup( el );
     });
 
 
@@ -78,6 +95,6 @@
 
   }
 
+  // -- //
 
 })();
-

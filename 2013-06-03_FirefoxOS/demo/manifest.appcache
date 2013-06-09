@@ -1,0 +1,14 @@
+CACHE MANIFEST
+# Version 0.1
+
+index.html
+style/base.css
+code/config.js
+code/install.js
+code/light.js
+
+NETWORK:
+*
+
+FALLBACK:
+/ index.html

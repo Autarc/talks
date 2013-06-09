@@ -1,0 +1,127 @@
+/** reset **/
+html, body {
+
+  margin  : 0;
+  padding : 0;
+  height  : 100%;
+}
+
+
+body {
+
+  background-color: #fc0;
+}
+
+
+.transition {
+
+  -webkit-transition: all 1s ease-in-out;
+     -moz-transition: all 1s ease-in-out;
+      -ms-transition: all 1s ease-in-out;
+       -o-transition: all 1s ease-in-out;
+          transition: all 1s ease-in-out;
+}
+
+
+.container {
+
+  height: 100%;
+
+  display: -webkit-flex;
+  display:    -moz-flex;
+  display:     -ms-flex;
+  display:         flex;
+
+  -webkit-flex-direction: column;
+     -moz-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+
+  -webkit-justify-content: center;
+     -moz-justify-content: center;
+      -ms-justify-content: center;
+          justify-content: center;
+
+
+  text-align: center;
+}
+
+
+
+.panel {
+
+  height        : 80%;
+  width         : 50%;
+  background    : #eee;
+
+  margin        : 0 auto;
+
+  padding       : 0 30px;
+
+  border        : 1px solid black;
+  border-radius : 10px;
+}
+
+
+/*
+.panel {
+
+  height: 90%;
+  width: 70%;
+  background: #eee;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  padding: 0 30px;
+  border-radius: 10px;
+
+  overflow-x: hidden;
+
+  margin: 0 auto;
+
+  margin-left: 10%;
+}
+*/
+
+
+
+.feedback {
+
+  height    : 30%;
+  width     : 50%;
+  min-height: 200px;
+
+  margin: 0 auto;
+
+  border: 1px solid #333;
+}
+
+.counter {
+
+  margin: 20px 0;
+}
+
+.counter:after {
+  content: '%';
+}
+
+
+
+
+.rumble {
+
+
+}
+
+
+
+.install-button {
+
+  margin-top: 20%;
+
+}
+
+
+.hidden {
+
+  display: none;
+}

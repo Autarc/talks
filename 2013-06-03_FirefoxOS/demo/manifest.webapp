@@ -1,0 +1,26 @@
+{
+  "name"            : "Rumble Cloak",
+  "description"     : "An example for using FFOS & WebAPI",
+
+  "default_locale"  : "en",
+
+  "launch_path"     : "/index.html",
+  "appcache_path"   : "/manifest.appcache",
+
+  "fullscreen"      : "true",
+
+  "type"            : "web",
+
+
+  "icons" : {
+
+    "128": "/assets/icons/easyicon_256.png"
+  },
+
+  "developer": {
+
+    "name"  : "Stefan Dühring",
+    "email" : "Autarc@gmail.com",
+    "url"   : "https://github.com/Autarc"
+  }
+}

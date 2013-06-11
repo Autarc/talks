@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" id="PikSlides">
+<head>
+
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="content-type" content="text/html,charset=utf-8" />
+
+  <title>:: Physics 3D ::</title>
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <link rel="stylesheet" type="text/css" href="../core/base.css" >
+  <link rel="stylesheet" type="text/css" href="vendor/prism/prism.css">
+  <link rel="stylesheet" type="text/css" href="vendor/google-webfont/font.css">
+  <link rel="stylesheet" type="text/css" href="vendor/icomoon/style.css">
+  <link rel="stylesheet" type="text/css" href="vendor/label.css/label.css">
+
+</head>
+<body>
+
+
+<!--   -->
+
+
+<div class="pikSlide part" id="Start">
+
+  <p class="js-slide-no"></p>
+
+  <div class="flex-container">
+
+    <div class="title">Physics 3D</div>
+
+    <div class="subtitle">discover a new dimension</div>
+
+    <figure>
+
+      <img class="no-border" src="assets/cannonjs.png" height="100%" alt="CannonJS"/>
+      <!-- from demo: http://schteppe.github.io/cannon.js/demos/stacks.html -->
+
+    </figure>
+
+  </div>
+
+</div>
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Market</p>
+
+    <div class="flex-container">
+
+      <div class="iframe-wrap">
+
+        <iframe seamless height="0" width="0" frameborder="0" scrolling="no"
+                src="http://www.unrealengine.com/html5/"></iframe>
+
+      </div>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>student - web &amp; game enthusiast</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Overview</p>
+
+    <div class="flex-container">
+
+      <ul>
+        <li>Engine</li>
+        <li>Differences</li>
+        <li>Library</li>
+      </ul>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>this lesson can mainly be devided into 2 parts</p>
+    </div>
+
+  </div>
+
+
+
+
+<div class="pikSlide part">
+
+  <div class="flex-container">
+
+    <p class="title"><span class="js-slide-no"></span> Simulation</p>
+
+  </div>
+
+</div>
+
+
+  <!-- why a physics engine ? -->
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Aspects</p>
+
+    <div class="flex-container">
+
+      <p>physics related math</p>
+
+      <p class="step">rigid body dynamics</p>
+
+      <p class="step">soft body dynamics</p>
+
+      <p class="step">collision detection</p>
+
+    </div>
+
+    <div class="pikNotes">
+      <p> (Matrcies, vectors, Velocity, rotation, momentum etc.)</p>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Aspects</p>
+
+    <div class="flex-container">
+
+      <p class="step-prev">physics related math</p>
+
+      <p>rigid body dynamics</p>
+
+      <p class="step">soft body dynamics</p>
+
+      <p class="step">collision detection</p>
+
+    </div>
+
+    <div class="pikNotes">
+      <p> (motion and interaction of shapes, that don't deform on collision/dmg,
+  includes joints to connect multiple object together for creeating a more complex object like
+  a ragdoll, wheel, truck from various parts)</p>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Aspects</p>
+
+    <div class="flex-container">
+
+      <p class="step-prev">physics related math</p>
+
+      <p class="step-prev">rigid body dynamics</p>
+
+      <p>soft body dynamics</p>
+
+      <p class="step">collision detection</p>
+
+    </div>
+
+    <div class="pikNotes">
+      <p> ( simulations for objects whose shape can change, cloth ...)</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Aspects</p>
+
+    <div class="flex-container">
+
+      <p class="step-prev">physics related math</p>
+
+      <p class="step-prev">rigid body dynamics</p>
+
+      <p class="step-prev">soft body dynamics</p>
+
+      <p>collision detection</p>
+
+    </div>
+
+    <div class="pikNotes">
+      <p> ( hit zone, overlaps - can be simple bounding shapres or more accurate per-pixel
+      approaches)</p>
+    </div>
+
+  </div>
+
+
+
+<div class="pikSlide part">
+
+  <div class="flex-container">
+
+    <p class="title"><span class="js-slide-no"></span> World</p>
+
+  </div>
+
+</div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Movement</p>
+
+    <div class="flex-container">
+
+      <!-- <p>Position: 2D => 3D</p> -->
+
+      <p>degrees of freedom</p>
+
+      <p class="step">camera position</p>
+<!--
+      <p>2D: just translate for x,y and rotate around z</p>
+
+      <p> 3D: 6 degrees, translate x,y,z (sway /  heave / surge) and rotation around x,y,z (pitch, yaw, roll)</p> -->
+
+    </div>
+
+    <div class="pikNotes">
+      <p>besides the requirements for textures, .... increase - also the physic engine -
+          which make provides the realsitic behavior and look will be extended</p>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Movement</p>
+
+    <div class="flex-container">
+
+      <!-- <p>Position: 2D => 3D</p> -->
+
+      <p class="step-prev">degrees of freedom</p>
+
+      <p>camera position</p>
+<!--
+      <p>2D: just translate for x,y and rotate around z</p>
+
+      <p> 3D: 6 degrees, translate x,y,z (sway /  heave / surge) and rotation around x,y,z (pitch, yaw, roll)</p> -->
+
+    </div>
+
+    <div class="pikNotes">
+      <p>besides the requirements for textures, .... increase - also the physic engine -
+          which make provides the realsitic behavior and look will be extended</p>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Model</p>
+
+    <div class="flex-container">
+
+      <p>mesh &amp; shapes</p>
+
+      <p class="step">light + shadow</p>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>2 representations - visual and calculations</p>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Model</p>
+
+    <div class="flex-container">
+
+      <p class="step-prev">mesh &amp; shapes</p>
+
+      <p>light + shadow</p>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>2 representations - visual and calculations</p>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Performance</p>
+
+    <div class="flex-container">
+
+      <p>hardware requirements</p>
+
+      <p class="step">!reality => culling</p>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Performance</p>
+
+    <div class="flex-container">
+
+      <p class="step-prev">hardware requirements</p>
+
+      <p>!reality => culling</p>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+<div class="pikSlide part">
+
+  <div class="flex-container">
+
+    <p class="title"><span class="js-slide-no"></span> Browser</p>
+
+  </div>
+
+</div>
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Stats</p>
+
+    <div class="flex-container">
+
+      <h3><a href="http://cannonjs.org">Cannon.js</a></h3>
+
+      <!-- "Lightweight 3D physics for the web" -->
+
+      <p>
+        <figure>
+
+          <img class="no-border" src="assets/popularity.png" height="100%" alt="CannonJS"/>
+          <!-- TODO: use live buttons/data...  -->
+
+        </figure>
+      </p>
+
+      <p>2012 by <a href="https://twitter.com/schteppe">@schteppe</a></p>
+
+      <p>Development: 220kb</p>
+
+      <p>Production: 68kb</p>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>this lesson can mainly be devided into 2 parts</p>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Features</p>
+
+    <div class="flex-container">
+
+      <p>rigid body physic engine</p>
+
+      <p class="step">written from scratch</p>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Features</p>
+
+    <div class="flex-container">
+
+      <p class="step-prev">rigid body physic engine</p>
+
+      <p>written from scratch</p>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Challenge</p>
+
+    <div class="flex-container">
+
+      <blockquote>
+        <p>Tried replacing the CANNON.Vec3 with [Typed Arrays]. Sadly that time was wasted...
+        The code ran significantly slower!</p>
+      <cite>- <a href="http://media.tojicode.com/sfjs-vectors/#12">Stefan Hedman</a> (Cannon.js)</cite>
+      </blockquote>
+
+      <figure>
+
+        <img src="assets/benchmark.png" height="100%" alt="CannonJS"/>
+        <!-- from http://media.tojicode.com/sfjs-vectors/#13
+              TODO: update with own - current benchmark-->
+
+      </figure>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>30% faster as using Float32UintArrays !</p>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Vector</p>
+
+    <div class="flex-container">
+
+      <h3><a href="">Cannon.Vec3</a></h3>
+      <!-- 5 iterations -->
+
+      <div class="pos-code">
+        <pre><code class="language-javascript">
+
+        /** vector container **/
+
+        </code></pre>
+      </div>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Element</p>
+
+    <div class="flex-container">
+
+      <h3><a href="">Shape + Body</a></h3>
+      <!-- 5 iterations -->
+
+      <div class="pos-code">
+        <pre><code class="language-javascript">
+
+        /** skeleton and form **/
+
+        </code></pre>
+      </div>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Nummeric</p>
+
+    <div class="flex-container">
+
+      <h3>Gauss-Seidel constraint solver</h3>
+      <!-- 5 iterations -->
+
+      <div class="pos-code">
+        <pre><code class="language-javascript">
+
+        /** solving contraints **/
+
+        </code></pre>
+      </div>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Impuls</p>
+
+    <div class="flex-container">
+
+      <h3>SPOOK stepper</h3>
+
+      <div class="pos-code">
+        <pre><code class="language-javascript">
+
+        /** .... **/
+
+        </code></pre>
+      </div>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+
+
+<div class="pikSlide part">
+
+  <div class="flex-container">
+
+    <p class="title"><span class="js-slide-no"></span> Example</p>
+
+  </div>
+
+</div>
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Guide</p>
+
+    <div class="flex-container">
+
+      <ul>
+        <li>1.) Invoke the Physic World</li>
+        <li class="step">2.) Create an Element</li>
+        <li class="step">3.) Define Limits</li>
+        <li class="step">4.) Update throung Rendering</li>
+      </ul>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Guide</p>
+
+    <div class="flex-container">
+
+      <ul>
+        <li class="step-prev">1.) Invoke the Physic World</li>
+        <li>2.) Create an Element</li>
+        <li class="step">3.) Define Limits</li>
+        <li class="step">4.) Update throung Rendering</li>
+      </ul>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Guide</p>
+
+    <div class="flex-container">
+
+      <ul>
+        <li class="step-prev">1.) Invoke the Physic World</li>
+        <li class="step-prev">2.) Create an Element</li>
+        <li>3.) Define Limits</li>
+        <li class="step">4.) Update throung Rendering</li>
+      </ul>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Guide</p>
+
+    <div class="flex-container">
+
+      <ul>
+        <li class="step-prev">1.) Invoke the Physic World</li>
+        <li class="step-prev">2.) Create an Element</li>
+        <li class="step-prev">3.) Define Limits</li>
+        <li>4.) Update throung Rendering</li>
+      </ul>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Visual</p>
+
+    <div class="flex-container">
+
+      <p>WebGL - Canvas - CSS3</p>
+
+      <p><a href="http://threejs.org">Three.js</a></p>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>Helper: Visual Tools for Animation</p>
+    </div>
+
+  </div>
+
+
+
+<!-- math, browser -->
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Demo</p>
+
+    <div class="flex-container">
+
+      <h3><a href="demo">Live Coding</a></h3>
+
+      <figure>
+
+        <img src="assets/placeholder.png" height="100%" alt="demo"/>
+
+      </figure>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+
+
+
+<div class="pikSlide part">
+
+  <div class="flex-container">
+
+    <div class="title">Questions</div>
+    <div class="amp">&amp;</div>
+    <div class="title">Discussion</div>
+
+  </div>
+
+</div>
+
+
+<!--  -->
+
+
+<script src="../core/pik7.js"></script>
+<script src="vendor/prism/prism.js"></script>
+
+<script src="custom.js"></script>
+<script src="credits.js"></script>
+
+</body>
+</html>

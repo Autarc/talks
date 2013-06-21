@@ -196,6 +196,8 @@ pre[class*="language-"] {
 .component-list > li { display: inline-block; margin: 2rem 1rem; }
 
 
+
+
 .step-list > li { margin: 2rem 0; }
 
 .step-list > li:nth-child(2) { margin-left: 2.3rem; } /* 2.2 */
@@ -208,3 +210,66 @@ pre[class*="language-"] {
 
 .topology { margin-right:  20px; }
 
+
+
+.source { margin-top: 20px; }
+
+.highlight { color: rgb(50,160,220) }
+
+.center {
+  width : 50%;
+  margin: 0 auto;
+}
+
+.tech-center {  margin-left : 28px; }
+
+.browser-css {  margin-left : 35px; }
+
+.browser-js {   margin-right: 40px; }
+
+
+.item {
+  width: 80%;
+  margin: 40px auto;
+}
+
+.left {
+  text-align: left;
+  float: left;
+}
+
+.right {
+  text-align: right;
+  float: right;
+}
+
+
+
+
+.cf:before,.cf:after {
+    content:"";
+    display:table;
+}
+.cf:after {
+    clear:both;
+}
+
+
+.flow > li { margin: 2rem 0; }
+
+.flow > li:nth-child(2) { margin-right: 0.8rem; }
+.flow > li:nth-child(3) { margin-left : 4.5rem; }
+.flow > li:nth-child(4) { margin-left : 1.0rem; }
+.flow > li:nth-child(5) { margin-right: 5.5rem; }
+
+
+.tips > li {
+
+  margin: 20px 0;
+  text-align: left;
+}
+
+
+.intro {
+  margin-top: 100px;
+}

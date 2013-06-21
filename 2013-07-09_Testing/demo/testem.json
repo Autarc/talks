@@ -1,0 +1,19 @@
+{
+  "framework"     : "mocha+chai",
+
+  "src_files"     : [ "test/unit/*.coffee" ],
+
+  "before_tests"  : "coffee -c test/unit/*.coffee",
+  "on_exit"       : "rm test/unit/*.js",
+  "after_tests"   : "rm test/unit/*.js",
+
+  "serve_files"   : [
+
+    "vendor/*.js",
+    "code/*.js",
+    "test/setup.js",
+    "test/unit/*.js"
+  ],
+
+  "launch_in_dev" : [ "Chrome", "Firefox" ]
+}

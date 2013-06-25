@@ -11,7 +11,7 @@
 
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" type="text/css" href="../core/base.css" >
   <link rel="stylesheet" type="text/css" href="vendor/prism/prism.css">
@@ -36,10 +36,9 @@
 
     <div class="subtitle">discover a new dimension</div>
 
-    <figure>
+    <figure class="intro">
 
       <img class="no-border" src="assets/cannonjs.png" height="100%" alt="CannonJS"/>
-      <!-- from demo: http://schteppe.github.io/cannon.js/demos/stacks.html -->
 
     </figure>
 
@@ -58,7 +57,7 @@
 
       <div class="iframe-wrap">
 
-        <iframe seamless height="0" width="0" frameborder="0" scrolling="no"
+        <iframe seamless allowtransparency="true" height="0" width="0" frameborder="0" scrolling="no"
                 src="http://www.unrealengine.com/html5/"></iframe>
 
       </div>
@@ -109,9 +108,6 @@
 
   <!-- why a physics engine ? -->
 
-
-
-
   <div class="pikSlide">
 
     <p class="category"><span class="js-slide-no"></span> Aspects</p>
@@ -129,7 +125,7 @@
     </div>
 
     <div class="pikNotes">
-      <p> (Matrcies, vectors, Velocity, rotation, momentum etc.)</p>
+      <p> (Matrices, Vectors, Velocity, Rotation, momentum etc.)</p>
     </div>
 
   </div>
@@ -155,7 +151,7 @@
     </div>
 
     <div class="pikNotes">
-      <p> (motion and interaction of shapes, that don't deform on collision/dmg,
+      <p> solid body - (motion and interaction of shapes, that don't deform on collision/dmg,
   includes joints to connect multiple object together for creeating a more complex object like
   a ragdoll, wheel, truck from various parts)</p>
     </div>
@@ -176,6 +172,8 @@
       <p class="step-prev">rigid body dynamics</p>
 
       <p>soft body dynamics</p>
+
+      <!-- http://lonely-pixel.com/lab/cloth/-->
 
       <p class="step">collision detection</p>
 
@@ -228,25 +226,46 @@
 
   <div class="pikSlide">
 
-    <p class="category"><span class="js-slide-no"></span> Movement</p>
+    <p class="category"><span class="js-slide-no"></span> Position</p>
 
     <div class="flex-container">
 
-      <!-- <p>Position: 2D => 3D</p> -->
+      <p>6 degrees of freedom</p>
 
-      <p>degrees of freedom</p>
+      <figure>
 
-      <p class="step">camera position</p>
+        <img src="assets/6DoF.jpg" height="100%" alt="Degrees of Freedom"/>
+
+        <!--
+          <figurecaption>
+            <a href="https://en.wikipedia.org/wiki/Six_degrees_of_freedom">@Wikipedia</a>
+          </figurecaption>
+        -->
+
+      </figure>
+
+      <!-- <p class="step">camera position</p> -->
 <!--
       <p>2D: just translate for x,y and rotate around z</p>
 
-      <p> 3D: 6 degrees, translate x,y,z (sway /  heave / surge) and rotation around x,y,z (pitch, yaw, roll)</p> -->
+  instead of 3
+      <p> 3D: 6 degrees, translate x,y,z (sway /  heave / surge) and rotation around x,y,z (pitch, yaw, roll)
+    -->
 
     </div>
 
     <div class="pikNotes">
-      <p>besides the requirements for textures, .... increase - also the physic engine -
+      <p>
+        <p>Position: 2D => 3D</p>
+          movement- besides the requirements for textures, .... increase - also the physic engine -
           which make provides the realsitic behavior and look will be extended</p>
+          try to solve the positioning as restricting (removing DoF) by adding constraints e.g.
+          hinge constraint (door) removes 5 , to just allow opening / closing || binding
+
+
+          ~ a physical connection that removes degrees of freedom from bodies
+
+          <!-- http://bulletphysics.org/mediawiki-1.5.8/index.php/Constraints -->
     </div>
 
   </div>
@@ -254,27 +273,55 @@
 
 
 
+
   <div class="pikSlide">
 
-    <p class="category"><span class="js-slide-no"></span> Movement</p>
+    <p class="category"><span class="js-slide-no"></span> Relation</p>
 
     <div class="flex-container">
 
-      <!-- <p>Position: 2D => 3D</p> -->
-
-      <p class="step-prev">degrees of freedom</p>
 
       <p>camera position</p>
-<!--
-      <p>2D: just translate for x,y and rotate around z</p>
 
-      <p> 3D: 6 degrees, translate x,y,z (sway /  heave / surge) and rotation around x,y,z (pitch, yaw, roll)</p> -->
+      <p class="step">perspective + movement</p>
 
     </div>
 
     <div class="pikNotes">
-      <p>besides the requirements for textures, .... increase - also the physic engine -
-          which make provides the realsitic behavior and look will be extended</p>
+      <p>
+
+        position: 2D => 3D (3->6)
+        some physics are just possible in 3d...
+        movement- besides the requirements for textures, .... increase - also the physic engine -
+        which make provides the realsitic behavior and look will be extended</p>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Relation</p>
+
+    <div class="flex-container">
+
+      <p class="step-prev">camera position</p>
+
+      <p>perspective + movement</p>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>
+      // überleitung: ich perspective, still movement of the camera.... (keine platte ansicht...)
+      perspective etc. from the user / ... /
+      some physics are just possible in 3d...
+      movement- besides the requirements for textures, .... increase - also the physic engine -
+      which make provides the realsitic behavior and look will be extended
+      </p>
     </div>
 
   </div>
@@ -292,16 +339,27 @@
 
       <p>mesh &amp; shapes</p>
 
-      <p class="step">light + shadow</p>
+      <figure>
+
+<!-- adjust image size of the first image , crop to same width/height as the 2nd -->
+
+        <img src="assets/udk-1.png" height="100%" alt="UDK"/>
+
+      </figure>
 
     </div>
 
     <div class="pikNotes">
-      <p>2 representations - visual and calculations</p>
+      <p>2 representations - visual and calculations
+
+  // some tools like unity e.g. offer speicifc tools - like a mesh collider, wich takes a
+  mesh asset an defines the specific shape based on convex hulls automatic
+
+  http://docs.unity3d.com/Documentation/Components/comp-DynamicsGroup.html
+      </p>
     </div>
 
   </div>
-
 
 
 
@@ -311,14 +369,61 @@
 
     <div class="flex-container">
 
-      <p class="step-prev">mesh &amp; shapes</p>
+      <p>mesh &amp; shapes</p>
 
-      <p>light + shadow</p>
+      <figure>
+
+        <img src="assets/udk-2.png" height="100%" alt="UDK"/>
+
+      </figure>
 
     </div>
 
     <div class="pikNotes">
-      <p>2 representations - visual and calculations</p>
+      <p>
+
+  here using the UDK - but many other engines with physic handlers etc. contain these featues
+  (!= complex solutions like etc. include and make it easier for the dev in general !)
+
+  // some tools like unity e.g. offer speicifc tools - like a mesh collider, wich takes a
+  mesh asset an defines the specific shape based on convex hulls automatic
+
+  http://docs.unity3d.com/Documentation/Components/comp-DynamicsGroup.html
+      </p>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Effects</p>
+
+    <div class="flex-container">
+
+      <p>light + shadow</p>
+
+     <div class="iframe-wrap">
+
+      <iframe seamless allowtransparency="true" height="0" width="0" frameborder="0" scrolling="no" src="vendor/illuminated.js/"></iframe>
+
+    </div>
+
+    <div class="source">
+      <a href="https://github.com/gre/illuminated.js">illuminated.js</a>
+    </div>
+
+    <!-- also: http://photon.attasi.com/ -->
+
+    </div>
+
+    <div class="pikNotes">
+      <p> depth - spatial depth - illusion through effects -
+        => include and show whats possibe with 2 , then consider that a 3d example needs to take of even more,as perspective canchange through the camera quite frequently...</p>
     </div>
 
   </div>
@@ -337,12 +442,15 @@
 
       <p>hardware requirements</p>
 
-      <p class="step">!reality => culling</p>
+      <span class="step" aria-hidden="true" data-icon="&#xf063;"></span>
+
+      <p class="step">frustum culling </p>
 
     </div>
 
     <div class="pikNotes">
-      <p></p>
+      <p>although is better chance to present real... || model, textures, additional
+        calculations for additional || some ph</p>
     </div>
 
   </div>
@@ -357,12 +465,15 @@
 
       <p class="step-prev">hardware requirements</p>
 
-      <p>!reality => culling</p>
+      <span aria-hidden="true" data-icon="&#xf063;"></span>
+
+      <p>frustum culling </p>
 
     </div>
 
     <div class="pikNotes">
-      <p></p>
+      <p>!reality => but regards as event triggers, physical behavior still needs to be
+      calculated from the outside of your "box" </p>
     </div>
 
   </div>
@@ -386,6 +497,38 @@
 
 
 
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Comparision</p>
+
+    <div class="flex-container">
+
+      <p>
+        <a class="no-popup" href="http://j15r.com/blog/2013/04/25/Box2d_Revisited">Box2d performance</a>
+      </p>
+
+      <figure>
+
+        <img src="assets/box2d.png" width="100%" alt="Box2d"/>
+
+      </figure>
+
+      <p>C (1x) -&nbsp;Java (2.3x) -&nbsp;AS (4x) -&nbsp;JS(8x)</p>
+
+      <!--  http://j15r.com/blog/2013/04/25/Box2d_Revisited  -->
+    </div>
+
+    <div class="pikNotes">
+      <p>not fast - restrian features and focus // especially on mobile and smaller projects
+         to much... || now considering a 3d engine like ammojs (bullet) or ... (libgl)</p>
+    </div>
+
+  </div>
+
+
+
+
   <div class="pikSlide">
 
     <p class="category"><span class="js-slide-no"></span> Stats</p>
@@ -394,22 +537,18 @@
 
       <h3><a href="http://cannonjs.org">Cannon.js</a></h3>
 
-      <!-- "Lightweight 3D physics for the web" -->
-
-      <p>
-        <figure>
-
-          <img class="no-border" src="assets/popularity.png" height="100%" alt="CannonJS"/>
-          <!-- TODO: use live buttons/data...  -->
-
-        </figure>
-      </p>
+      <p><i>"Lightweight 3D physics for the web"</i></p>
 
       <p>2012 by <a href="https://twitter.com/schteppe">@schteppe</a></p>
 
       <p>Development: 220kb</p>
 
       <p>Production: 68kb</p>
+
+
+      <p>
+        <a class="button no-popup" href="https://github.com/schteppe/cannon.js">Github</a>
+      </p>
 
     </div>
 
@@ -473,16 +612,19 @@
     <div class="flex-container">
 
       <blockquote>
-        <p>Tried replacing the CANNON.Vec3 with [Typed Arrays]. Sadly that time was wasted...
-        The code ran significantly slower!</p>
-      <cite>- <a href="http://media.tojicode.com/sfjs-vectors/#12">Stefan Hedman</a> (Cannon.js)</cite>
+        <cite>
+          "Tried replacing the CANNON.Vec3 with [Typed Arrays].
+          Sadly that time was wasted... The code ran significantly slower!"
+        </cite>
+        <footer class="source">
+          -&nbsp;<a href="http://media.tojicode.com/sfjs-vectors/#12">Stefan Hedman</a> (Cannon.js)
+        </footer>
       </blockquote>
 
       <figure>
 
         <img src="assets/benchmark.png" height="100%" alt="CannonJS"/>
-        <!-- from http://media.tojicode.com/sfjs-vectors/#13
-              TODO: update with own - current benchmark-->
+        <!-- from http://media.tojicode.com/sfjs-vectors/#13 TODO: update with own - current benchmark-->
 
       </figure>
 
@@ -504,13 +646,19 @@
 
     <div class="flex-container">
 
-      <h3><a href="">Cannon.Vec3</a></h3>
-      <!-- 5 iterations -->
+      <h3>Coordinates</h3>
 
       <div class="pos-code">
         <pre><code class="language-javascript">
 
         /** vector container **/
+
+        CANNON.Vec3 = function(x,y,z){
+
+            this.x = x||0.0;
+            this.y = y||0.0;
+            this.z = z||0.0;
+        };
 
         </code></pre>
       </div>
@@ -518,7 +666,8 @@
     </div>
 
     <div class="pikNotes">
-      <p></p>
+      <p>as it uses default configurations its also possible to just use the engine
+        for 2d  environments, just at one level (plane)</p>
     </div>
 
   </div>
@@ -534,21 +683,27 @@
 
     <div class="flex-container">
 
-      <h3><a href="">Shape + Body</a></h3>
-      <!-- 5 iterations -->
+      <h3>Collision</h3>
 
-      <div class="pos-code">
-        <pre><code class="language-javascript">
+      <figure>
 
-        /** skeleton and form **/
+        <img src="assets/shapes.png" height="100%" alt="Shapes"/>
 
-        </code></pre>
-      </div>
+      </figure>
+
+      <!--
+      <p>
+        <a href="https://github.com/schteppe/cannon.js#supported-contact-shape-pairs">
+          Shape overview
+        </a>
+      </p>
+      -->
 
     </div>
 
     <div class="pikNotes">
-      <p></p>
+      <p>see naiveBroadphase => collision and reflection will be handled automatic (simple) , also extensible ?  collision hander can be done, where you just check with what a collisions happens // less manual -> more granually on the game play aspect
+      </p>
     </div>
 
   </div>
@@ -557,53 +712,65 @@
 
   <div class="pikSlide">
 
-    <p class="category"><span class="js-slide-no"></span> Nummeric</p>
+    <p class="category"><span class="js-slide-no"></span> Math</p>
 
     <div class="flex-container">
 
-      <h3>Gauss-Seidel constraint solver</h3>
-      <!-- 5 iterations -->
+      <p>"Gauss-Seidel" (<a href="http://www.slideshare.net/jorgeduardooo/gauss-sediel">#1</a>|<a class="no-popup" href="https://github.com/schteppe/cannon.js/blob/master/src/solver/GSSolver.js#L31">#2</a>) constraint solver</p>
+      <!--nummeric iteration // 5 iterations explain math ....  -->
 
-      <div class="pos-code">
-        <pre><code class="language-javascript">
+      <p class="step">transformation matrix</p>
 
-        /** solving contraints **/
+<!-- 2D -> a vector functions to handle translation and rotation -->
+<!-- 3D ->  single transformation matrix operation that handles both translation and rotation in one (sort of) neat matrix operation. || focus on transformation matrix -->
 
-        </code></pre>
-      </div>
-
-    </div>
-
-    <div class="pikNotes">
-      <p></p>
-    </div>
-
-  </div>
-
-
-  <div class="pikSlide">
-
-    <p class="category"><span class="js-slide-no"></span> Impuls</p>
-
-    <div class="flex-container">
-
-      <h3>SPOOK stepper</h3>
-
+      <!--
       <div class="pos-code">
         <pre><code class="language-javascript">
 
         /** .... **/
 
         </code></pre>
-      </div>
+      </div> -->
 
     </div>
 
     <div class="pikNotes">
-      <p></p>
+      <p>impuls -SPOOK stepper</p>
     </div>
 
   </div>
+
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Math</p>
+
+    <div class="flex-container">
+
+      <p class="step-prev">"Gauss-Seidel" (<a class="step-prev" href="http://www.slideshare.net/jorgeduardooo/gauss-sediel">#1</a>|<a class="no-popup step-prev" href="https://github.com/schteppe/cannon.js/blob/master/src/solver/GSSolver.js#L31">#2</a>) constraint solver</p>
+      <!--nummeric iteration // 5 iterations explain math ....  -->
+
+    <!-- https://github.com/schteppe/cannon.js/blob/master/src/solver/GSSolver.js#L31 -->
+
+      <p>transformation matrix</p>
+
+<!-- 2D -> a vector functions to handle translation and rotation -->
+<!-- 3D ->  single transformation matrix operation that handles both translation and rotation in one (sort of) neat matrix operation. || focus on transformation matrix -->
+
+    </div>
+
+    <div class="pikNotes">
+      <p>if you want more technical, i can recommend you this slides ||
+        but in genrral it works like all iterative nummeric methods to solve |
+        done in the library...//impuls -SPOOK stepper</p>
+    </div>
+
+  </div>
+
 
 
 
@@ -624,11 +791,11 @@
 
     <div class="flex-container">
 
-      <ul>
+      <ul class="guide">
         <li>1.) Invoke the Physic World</li>
         <li class="step">2.) Create an Element</li>
         <li class="step">3.) Define Limits</li>
-        <li class="step">4.) Update throung Rendering</li>
+        <li class="step">4.) Update through Rendering</li>
       </ul>
 
     </div>
@@ -647,11 +814,11 @@
 
     <div class="flex-container">
 
-      <ul>
+      <ul class="guide">
         <li class="step-prev">1.) Invoke the Physic World</li>
         <li>2.) Create an Element</li>
         <li class="step">3.) Define Limits</li>
-        <li class="step">4.) Update throung Rendering</li>
+        <li class="step">4.) Update through Rendering</li>
       </ul>
 
     </div>
@@ -663,20 +830,17 @@
   </div>
 
 
-
-
-
   <div class="pikSlide">
 
     <p class="category"><span class="js-slide-no"></span> Guide</p>
 
     <div class="flex-container">
 
-      <ul>
+      <ul class="guide">
         <li class="step-prev">1.) Invoke the Physic World</li>
         <li class="step-prev">2.) Create an Element</li>
         <li>3.) Define Limits</li>
-        <li class="step">4.) Update throung Rendering</li>
+        <li class="step">4.) Update through Rendering</li>
       </ul>
 
     </div>
@@ -686,8 +850,6 @@
     </div>
 
   </div>
-
-
 
 
 
@@ -697,11 +859,11 @@
 
     <div class="flex-container">
 
-      <ul>
+      <ul class="guide">
         <li class="step-prev">1.) Invoke the Physic World</li>
         <li class="step-prev">2.) Create an Element</li>
         <li class="step-prev">3.) Define Limits</li>
-        <li>4.) Update throung Rendering</li>
+        <li>4.) Update through Rendering</li>
       </ul>
 
     </div>
@@ -711,11 +873,6 @@
     </div>
 
   </div>
-
-
-
-
-
 
 
 
@@ -733,15 +890,12 @@
     </div>
 
     <div class="pikNotes">
-      <p>Helper: Visual Tools for Animation</p>
+      <p>Helper: Visual Tools for Animation / provides helper like lighning, where you can
+        define directionalloight, spotlight etc. // will just use later for rendering
+        boxes around ...</p>
     </div>
 
   </div>
-
-
-
-<!-- math, browser -->
-
 
 
 
@@ -751,13 +905,19 @@
 
     <div class="flex-container">
 
-      <h3><a href="demo">Live Coding</a></h3>
+      <h3><a class="no-popup" href="../../demo/live.html">Simple World</a></h3>
 
       <figure>
 
-        <img src="assets/placeholder.png" height="100%" alt="demo"/>
+        <img src="assets/demos.png" height="100%" alt="demos"/>
 
+      <!-- http://schteppe.github.io/cannon.js/ -->
+      <!-- from demo: http://schteppe.github.io/cannon.js/demos/stacks.html -->
       </figure>
+
+      <p>
+        <a class="no-popup" href="http://cannonjs.org/">Demos</a>
+      </p>
 
     </div>
 
@@ -766,6 +926,7 @@
     </div>
 
   </div>
+
 
 
 

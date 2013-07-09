@@ -141,6 +141,8 @@ body {
 .title          {  font-size: 4rem; }
 .subtitle, .amp {  font-size: 3rem; }
 
+.subtitle { margin-top: 20px; }
+
 .description {
 
   font-style: italic;
@@ -272,4 +274,37 @@ pre[class*="language-"] {
 
 .intro {
   margin-top: 100px;
+}
+
+
+
+
+
+iframe {
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+iframe[seamless] {
+
+  background-color: transparent;
+  border  : 0 none transparent;
+  padding : 0;
+  overflow: hidden;
+}
+
+.iframe-wrap {
+
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  /*border: 0;*/
+
+  border: 1px solid #000;
+  border-radius: 10px;
 }

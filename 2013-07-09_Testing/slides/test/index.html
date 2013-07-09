@@ -34,7 +34,7 @@
 
     <div class="title">Testing</div>
 
-    <div class="subtitle">Dive into serious coding</div>
+    <div class="subtitle">Dive Into Serious Coding</div>
 
     <figure class="intro">
 
@@ -224,8 +224,7 @@
     </div>
 
     <div class="pikNotes">
-      <p> ask question towards the audience - see what they already know or expect -
-        in general also including the idea of beeing automated, done by the system...</p>
+      <p></p>
     </div>
 
   </div>
@@ -254,8 +253,7 @@
     </div>
 
     <div class="pikNotes">
-      <p> ask question towards the audience - see what they already know or expect -
-        in general also including the idea of beeing automated, done by the system...</p>
+      <p></p>
     </div>
 
   </div>
@@ -300,7 +298,7 @@
     </div>
 
     <div class="pikNotes">
-      <p>(execution is poissible and returns a result - can true or false, valid result !</p>
+      <p>(execution is poissible and returns a result - can true or false, valid result !)</p>
     </div>
 
   </div>
@@ -335,8 +333,6 @@
 
 
 
-
-
   <div class="pikSlide">
 
     <p class="category"><span class="js-slide-no"></span> Benefits</p>
@@ -350,7 +346,8 @@
     </div>
 
     <div class="pikNotes">
-      <p>code that is: neutral: logical validation to verify the result / code tested !</p>
+      <p>code that is: neutral - logical validation to verify the result / code tested |
+         communicate with others using a a defined interface !</p>
     </div>
 
   </div>
@@ -407,6 +404,7 @@
     <div class="flex-container">
 
       <p>Unit Test</p>
+      <p class="step">Functional Test</p>
       <p class="step">Integration Test</p>
       <p class="step">Acceptance Test</p>
 
@@ -414,7 +412,7 @@
 
     <div class="pikNotes">
       <p>6 types exists, but focus/explain a few about decomposition:
-       defining into small logical units - does the function behave properly ? -
+       defining into small logical units - does the functions behave properly -
        independent, fast, focused</p>
     </div>
 
@@ -430,13 +428,14 @@
     <div class="flex-container">
 
       <p class="step-prev">Unit Test</p>
-      <p>Integration Test</p>
+      <p>Functional Test</p>
+      <p class="step">Integration Test</p>
       <p class="step">Acceptance Test</p>
 
     </div>
 
     <div class="pikNotes">
-      <p>whole application in an enviroment - dies the application behave properly ?</p>
+      <p>single functions - user interaction</p>
     </div>
 
   </div>
@@ -451,6 +450,29 @@
     <div class="flex-container">
 
       <p class="step-prev">Unit Test</p>
+      <p class="step-prev">Functional Test</p>
+      <p>Integration Test</p>
+      <p class="step">Acceptance Test</p>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>whole application in an enviroment - does the application behave properly ? - real
+        dependencies (e.g. DB) - combined funtionalities</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Types</p>
+
+    <div class="flex-container">
+
+      <p class="step-prev">Unit Test</p>
+      <p class="step-prev">Functional Test</p>
       <p class="step-prev">Integration Test</p>
       <p>Acceptance Test</p>
 
@@ -458,10 +480,11 @@
 
     <div class="pikNotes">
       <p>feedback - performance - use case - also followed by direct user test like A/B, drive,
-        environment || same as integration ?</p>
+        environment || "validate correct behavior of the application by the end user"</p>
     </div>
 
   </div>
+
 
 
 
@@ -618,6 +641,33 @@
 
 
 
+  <div class="pikSlide">
+
+    <p class="js-slide-no"></p>
+    <p class="category">Flow</p>
+
+    <div class="flex-container">
+
+      <figure>
+
+        <img src="assets/cycle.jpg" height="100%" alt="Flow"/>
+
+      </figure>
+
+      <p>continous updates</p>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+
+
+
+<!--  -->
 
 
   <div class="pikSlide">
@@ -671,7 +721,8 @@
     </div>
 
     <div class="pikNotes">
-      <p></p>
+      <p>similar like relying on a benchmark - score is just for the test,
+         not the application/task - TDD: assertions, BDD: expectation</p>
     </div>
 
   </div>
@@ -770,6 +821,8 @@
 
 
 
+<!-- like JSHint or CSSLint for the DOM -->
+
 
 
   <!--  -->
@@ -788,7 +841,11 @@
     </div>
 
     <div class="pikNotes">
-      <p>e.g. for semantic see W3C validator, grammar check, translation etc.</p>
+      <p>e.g. for semantic see W3C validator, grammar check, translation etc. -
+
+          <!-- http://squizlabs.github.io/HTML_CodeSniffer/  -->
+          <!-- https://github.com/philipwalton/html-inspector -->
+      </p>
     </div>
 
   </div>
@@ -811,13 +868,7 @@
 
     <div class="pikNotes">
       <p> https://github.com/Huddle/PhantomCSS, https://github.com/geuis/helium-css | unused css etc.
-
-        || test||
-
-        http://csste.st/
-
-        || at least static validation like css lint for best practice advices
-
+        test-   http://csste.st/ - at least static validation like css lint for best practice advices
       </p>
     </div>
 
@@ -846,6 +897,44 @@
 
 
 
+  <!--  -->
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Level</p>
+
+    <div class="flex-container">
+
+      <p>Passive | Static Code Analysis</p>
+
+      <p class="step">Active | Automatic Testing</p>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>Linter - JSLint, JSHint | checked automatic in a grunt task or as a plugin</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Level</p>
+
+    <div class="flex-container">
+
+      <p class="step-prev">Passive | Static Code Analysis</p>
+
+      <p>Active | Automatic Testing</p>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>accessing rendered nodes || seperate DOM interaction &amp; visualization...</p>
+    </div>
+
+  </div>
 
 
 
@@ -933,12 +1022,134 @@
 
 
 
+
   <!--  -->
   <div class="pikSlide">
 
-  <!-- seperation - for all slides, before the last step ! !!! (else the definition below) -->
-    <!-- <p class="js-slide-no"></p> -->
-    <!-- <p class="category">Tools</p> -->
+    <p class="category"><span class="js-slide-no"></span> Write</p>
+
+    <div class="flex-container">
+
+      <ul class="tips">
+        <li>[+] extract into modules (!= inline)</li>
+        <li class="step">[+] seperate JS from DOM</li>
+        <li class="step">[+] encapsule in objects</li>
+        <li class="step">[+] mock async / input</li>
+        <li class="step">[-] don't test one aspect multiple times</li>
+      </ul>
+
+    </div>
+
+    <div class="pikNotes">
+      <p></p>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Write</p>
+
+    <div class="flex-container">
+
+      <ul class="tips">
+        <li class="step-prev">[+] extract into modules (!= inline)</li>
+        <li>[+] seperate JS from DOM</li>
+        <li class="step">[+] encapsule in objects</li>
+        <li class="step">[+] mock async / input</li>
+        <li class="step">[-] don't test one aspect multiple times</li>
+      </ul>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>decoupling</p>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Write</p>
+
+    <div class="flex-container">
+
+      <ul class="tips">
+        <li class="step-prev">[+] extract into modules (!= inline)</li>
+        <li class="step-prev">[+] seperate JS from DOM</li>
+        <li>[+] encapsule in objects</li>
+        <li class="step">[+] mock async / input</li>
+        <li class="step">[-] don't test one aspect multiple times</li>
+      </ul>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>decoupling</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Write</p>
+
+    <div class="flex-container">
+
+      <ul class="tips">
+        <li class="step-prev">[+] extract into modules (!= inline)</li>
+        <li class="step-prev">[+] seperate JS from DOM</li>
+        <li class="step-prev">[+] encapsule in objects</li>
+        <li>[+] mock async / input</li>
+        <li class="step">[-] don't test one aspect multiple times</li>
+      </ul>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>fake data</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="pikSlide">
+
+    <p class="category"><span class="js-slide-no"></span> Write</p>
+
+    <div class="flex-container">
+
+      <ul class="tips">
+        <li class="step-prev">[+] extract into modules (!= inline)</li>
+        <li class="step-prev">[+] seperate JS from DOM</li>
+        <li class="step-prev">[+] encapsule in objects</li>
+        <li class="step-prev">[+] mock async / input</li>
+        <li>[-] don't test one aspect multiple times</li>
+      </ul>
+
+    </div>
+
+    <div class="pikNotes">
+      <p>avoid repetition</p>
+    </div>
+
+  </div>
+
+
+
+
+  <!--  -->
+  <div class="pikSlide">
 
     <p class="category"><span class="js-slide-no"></span> Tools</p>
 
@@ -977,122 +1188,8 @@
 
 
 
-  <!--  -->
-  <div class="pikSlide">
-
-    <p class="category"><span class="js-slide-no"></span> Write</p>
-
-    <div class="flex-container">
-
-      <ul class="tips">
-        <li>[+] extract into modules (!= inline)</li>
-        <li class="step">[+] seperate JS from DOM</li>
-        <li class="step">[+] mock async / input</li>
-        <li class="step">[-] don't test one aspect multiple times</li>
-      </ul>
-
-    </div>
-
-    <div class="pikNotes">
-      <p></p>
-    </div>
-
-  </div>
 
 
-
-
-  <div class="pikSlide">
-
-    <p class="category"><span class="js-slide-no"></span> Write</p>
-
-    <div class="flex-container">
-
-      <ul class="tips">
-        <li class="step-prev">[+] extract into modules (!= inline)</li>
-        <li>[+] seperate JS from DOM</li>
-        <li class="step">[+] mock async / input</li>
-        <li class="step">[-] don't test one aspect multiple times</li>
-      </ul>
-
-    </div>
-
-    <div class="pikNotes">
-      <p>decoupling</p>
-    </div>
-
-  </div>
-
-
-
-  <div class="pikSlide">
-
-    <p class="category"><span class="js-slide-no"></span> Write</p>
-
-    <div class="flex-container">
-
-      <ul class="tips">
-        <li class="step-prev">[+] extract into modules (!= inline)</li>
-        <li class="step-prev">[+] seperate JS from DOM</li>
-        <li>[+] mock async / input</li>
-        <li class="step">[-] don't test one aspect multiple times</li>
-      </ul>
-
-    </div>
-
-    <div class="pikNotes">
-      <p>avoid repetition</p>
-    </div>
-
-  </div>
-
-
-
-  <div class="pikSlide">
-
-    <p class="category"><span class="js-slide-no"></span> Write</p>
-
-    <div class="flex-container">
-
-      <ul class="tips">
-        <li class="step-prev">[+] extract into modules (!= inline)</li>
-        <li class="step-prev">[+] seperate JS from DOM</li>
-        <li class="step-prev">[+] mock async / input</li>
-        <li>[-] don't test one aspect multiple times</li>
-      </ul>
-
-    </div>
-
-    <div class="pikNotes">
-      <p></p>
-    </div>
-
-  </div>
-
-
-  <!-- <div class="pikSlide">
-
-    <p class="js-slide-no"></p>
-    <p class="category">Advice</p>
-
-    <div class="flex-container">
-
-    <p>Focus on Logic</p>
-
-    </div>
-
-    <div class="pikNotes">
-      <p>seperate from DOM - vsual effects are checked different-</p>
-    </div>
-
-  </div>
-
- -->
-
-
-
-
-  <!--  -->
   <div class="pikSlide">
 
     <p class="js-slide-no"></p>
@@ -1100,15 +1197,18 @@
 
     <div class="flex-container">
 
-      <h3><a href="">Todo-List</a></h3>
+      <h3><a href="https://github.com/Autarc/talks/tree/gh-pages/2013-07-09_Testing/demo">Todo-List</a></h3>
 
       <figure>
 
-        <img src="assets/placeholder.png" height="100%" alt="Todo-List"/>
+        <img style="background:#fff;" src="assets/todolist.png" height="100%" alt="Todo-List"/>
 
       </figure>
 
-
+<!--       <figurecaption>
+         <a href="http://todomvc.com/">todomvc.com</a>
+       </figurecaption>
+ -->
     </div>
 
     <div class="pikNotes">

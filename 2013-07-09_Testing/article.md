@@ -11,11 +11,11 @@ Testing - Dive Into Serious Coding
 
 ## Previous Education
 
-After 3 years of studiying I will finally receive my bachelor degree in *international media and computing* and graduate from college in a few weeks.
-Despite the general assumption that computer science in universities covers most of the necessary
-skills for contributing to larger projects, I have to admit that in reality this is rarely the
-case. We certainly get to know the fundamentals about programming languages, architectures, design
-patterns or quality assurance - but left with questions about solving common [technical debts](http://martinfowler.com/bliki/TechnicalDebt.html).
+After 3 years of studiying I will finally receive my bachelor degree in *international media and computing* and graduate from college in a few weeks. Despite the general assumption that computer
+science in universities covers most of the necessary skills for contributing to larger projects,
+I have to admit that in reality this is rarely the case. We certainly get to know the fundamentals
+about programming languages, architectures, design patterns or quality assurance - but left with
+questions about solving common [technical debts](http://martinfowler.com/bliki/TechnicalDebt.html).
 
 In the 3rd semester we had *Software Engineering* two times a week, but we were running out of
 time and just discussed some general principles about project management. Some of us never had the
@@ -93,8 +93,8 @@ to be updated and refactored until all of them pass their set of rules.
 ![Continuous-Flow](https://raw.github.com/Autarc/talks/gh-pages/2013-07-09_Testing/material/Iterative-Cycles.png)
 
 The continous approach includes often smaller updates, which affects the ongoing development.
-Design flaws will be recognized already during the definition of the tests and can therefore be fixed
-as soon as possible.
+Design flaws will be recognized already during the definition of the tests and can therefore
+be fixed as soon as possible.
 
 Similar to TDD is the concept of behavior driven development (BDD). In contrast to TDD it uses
 a different selection of words, which empowers users to describe stories with an interface similar

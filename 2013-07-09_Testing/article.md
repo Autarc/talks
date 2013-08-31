@@ -1,8 +1,17 @@
 Testing - Dive Into Serious Coding
 ==================================
 
-After 3 years of studiying I will finally receive my bachelor degree in *international media and computing* and graduate from college in a few weeks.
+- [Previous Education](#previous-education)
+- [Idea of Testing](#idea-of-testing)
+- [Continuous Flow](#continuous-flow)
+- [Mature Community](#mature-community)
+- [Few Advices](#few-advices)
+- [Related Sites](#related-sites)
 
+
+## Previous Education
+
+After 3 years of studiying I will finally receive my bachelor degree in *international media and computing* and graduate from college in a few weeks.
 Despite the general assumption that computer science in universities covers most of the necessary
 skills for contributing to larger projects, I have to admit that in reality this is rarely the
 case. We certainly get to know the fundamentals about programming languages, architectures, design
@@ -70,18 +79,22 @@ development and short release cycles. Compared to the former waterfall model, cl
 workflow short iterations with viable products at the end of each sprint. The approach of test
 driven development (TDD) raised out of this movement.
 
-Basically the process is following a repetitive pattern consisting of 5 steps:
-
+Basically the process is following a repetitive pattern consisting of these steps:
+```
   1.) define the expected result (what should happen on a higher level)
   2.) group these use-cases and split their logic into modules
   3.) write an explicit test for each of them
   4.) implement the specified part according to its test
   5.) run the test on top of the code
-
+```
 At the end of this general flow will the tests either succeed or fail. In this case they are going
 to be updated and refactored until all of them pass their set of rules.
 
 ![Continuous-Flow](https://raw.github.com/Autarc/talks/gh-pages/2013-07-09_Testing/material/Iterative-Cycles.png)
+
+The continous approach includes often smaller updates, which affects the ongoing development.
+Design flaws will be recognized already during the definition of the tests and can therefore be fixed
+as soon as possible.
 
 Similar to TDD is the concept of behavior driven development (BDD). In contrast to TDD it uses
 a different selection of words, which empowers users to describe stories with an interface similar
@@ -94,7 +107,7 @@ should happen compared to just *what* is going on. Even people with less coding 
 learn to write such tests in a few minutes, which can be useful for collaborative work in a team.
 
 
-## Mature Browser
+## Mature Community
 
 In web development we often distinguish between front- & back-end. Both of them can be tested,
 although the server side is more aware of this approach. Especially in the
@@ -148,7 +161,8 @@ communication) or executing business logic (specific tasks).
 * provide fake data for aynchronous behavior or interactions like input options
 * don't repeat yourself and test one aspect multiple times in different test files
 
-## Related
+
+## Related Sites
 
 - [Let's Code: Test-Driven JavaScript](http://www.letscodejavascript.com/) - course about TDJS
 - [CSS Test](http://csste.st/) - best practices for testing CSS
